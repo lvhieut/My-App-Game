@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/violet"
+    tools:context=".Container_Screen.Sub_Screen.ui.Game_Play_Screen">
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/firstLinearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <RelativeLayout
+            android:id="@+id/subLayout"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/border_bg_oval">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_centerInParent="true"
+                android:background="@drawable/border_bg_image"
+                android:src="@drawable/avt" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:orientation="horizontal">
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="150dp"
+                android:layout_height="17dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="30dp"
+                android:background="@drawable/border_bg">
+
+                <ProgressBar
+                    android:id="@+id/progress_horizontal"
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:layout_width="150dp"
+                    android:layout_height="15dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="2dp"
+                    android:padding="2dp"
+                    android:progressDrawable="@drawable/custom_progress_horizontal"
+                    tools:max="100"
+                    android:progress="70"/>
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <RelativeLayout
+                android:id="@+id/progress_level"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="-10dp"
+                android:layout_marginTop="17dp"
+                android:background="@drawable/border_bg">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="34dp"
+                    android:layout_height="34dp"
+                    android:layout_centerInParent="true"
+                    android:background="@drawable/border_bg_orange"
+                    android:padding="10dp" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_marginStart="13dp"
+                    android:layout_marginTop="9dp"
+                    android:text="@string/number_test_12"
+                    android:fontFamily="@font/poppins_extrabold"
+                    android:textColor="@color/white"
+                    android:textSize="16sp" />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:orientation="vertical">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/points"
+                android:textColor="@color/white"
+                android:textSize="20sp" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:fontFamily="@font/poppins_medium"
+                android:text="@string/number_test_231"
+                android:textColor="@color/white"
+                android:textSize="20sp" />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <RelativeLayout
+        android:id="@+id/rlvLayout"
+        android:layout_width="match_parent"
+        android:layout_height="500dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/decoration"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/firstLinearLayout">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="350dp"
+            android:layout_height="400dp"
+            android:background="@drawable/ic_mutil_player"
+            android:translationX="26dp"
+            android:translationY="60dp" />
+    </RelativeLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

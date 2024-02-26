@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_nav_graph"
+    app:startDestination="@id/intro_Screen">
+
+    <fragment
+        android:id="@+id/intro_Screen"
+        android:name="com.example.quizz_game.Container_Screen.Sub_Screen.ui.Intro_Screen"
+        android:label="Intro_Screen" >
+        <action
+            android:id="@+id/action_intro_Screen_to_game_Play_Screen"
+            app:destination="@id/game_Play_Screen" />
+    </fragment>
+    <fragment
+        android:id="@+id/game_Play_Screen"
+        android:name="com.example.quizz_game.Container_Screen.Sub_Screen.ui.Game_Play_Screen"
+        android:label="fragment_game__play__screen"
+        tools:layout="@layout/fragment_game__play__screen" />
+</navigation>
