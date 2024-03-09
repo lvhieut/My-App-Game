@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Kích thước và khoảng cách -->
+    <dimen name="dimen_padding_2dp">2dp</dimen>
+    <dimen name="dimen_padding_10dp">10dp</dimen>
+    <dimen name="dimen_padding_start_8dp">8dp</dimen>
+    <dimen name="dimen_padding_start_17dp">17dp</dimen>
+
+    <dimen name="dimen_margin_20dp">20dp</dimen>
+    <dimen name="dimen_margin_top_2dp">2dp</dimen>
+    <dimen name="dimen_margin_top_9dp">9dp</dimen>
+    <dimen name="dimen_margin_top_10dp">10dp</dimen>
+    <dimen name="dimen_margin_top_15dp">15dp</dimen>
+    <dimen name="dimen_margin_top_16dp">16dp</dimen>
+    <dimen name="dimen_margin_top_17dp">17dp</dimen>
+    <dimen name="dimen_margin_top_30dp">30dp</dimen>
+    <dimen name="dimen_margin_top_40dp">40dp</dimen>
+    <dimen name="dimen_margin_top_80dp">80dp</dimen>
+
+    <dimen name="dimen_margin_start_13dp">13dp</dimen>
+    <dimen name="dimen_margin_start_18dp">18dp</dimen>
+    <dimen name="dimen_margin_start_20dp">20dp</dimen>
+    <dimen name="dimen_margin_start_70dp">70dp</dimen>
+
+    <!-- Kích thước hình dạng -->
+    <dimen name="dimen_width_20dp">20dp</dimen>
+    <dimen name="dimen_height_20dp">20dp</dimen>
+    <dimen name="dimen_width_34dp">34dp</dimen>
+    <dimen name="dimen_height_34dp">34dp</dimen>
+    <dimen name="dimen_width_40dp">40dp</dimen>
+    <dimen name="dimen_height_40dp">40dp</dimen>
+    <dimen name="dimen_width_60dp">60dp</dimen>
+    <dimen name="dimen_height_60dp">60dp</dimen>
+    <dimen name="dimen_width_63dp">63dp</dimen>
+    <dimen name="dimen_width_70dp">70dp</dimen>
+    <dimen name="dimen_height_70dp">70dp</dimen>
+    <dimen name="dimen_width_90dp">90dp</dimen>
+    <dimen name="dimen_height_90dp">90dp</dimen>
+    <dimen name="dimen_width_94dp">94dp</dimen>
+    <dimen name="dimen_height_94dp">94dp</dimen>
+    <dimen name="dimen_width_100dp">100dp</dimen>
+    <dimen name="dimen_width_150dp">150dp</dimen>
+    <dimen name="dimen_height_100dp">100dp</dimen>
+    <dimen name="dimen_height_450dp">450dp</dimen>
+    <dimen name="dimen_height_520dp">520dp</dimen>
+    <dimen name="dimen_width_270dp">270dp</dimen>
+    <dimen name="dimen_height_270dp">270dp</dimen>
+    <dimen name="dimen_width_300dp">300dp</dimen>
+    <dimen name="dimen_width_330dp">330dp</dimen>
+    <dimen name="dimen_height_330dp">330dp</dimen>
+    <dimen name="dimen_width_390dp">390dp</dimen>
+    <dimen name="dimen_width_600dp">600dp</dimen>
+
+    <!-- Kích thước văn bản -->
+    <dimen name="dimen_text_size_16sp">16sp</dimen>
+    <dimen name="dimen_text_size_20sp">20sp</dimen>
+    <dimen name="dimen_text_size_30sp">30sp</dimen>
+
+    <!-- Hiệu ứng và thuộc tính khác -->
+    <dimen name="dimen_elevation_2dp">2dp</dimen>
+    <dimen name="dimen_elevation_10dp">10dp</dimen>
+    <dimen name="dimen_translation_y_40dp">40dp</dimen>
+    <dimen name="dimen_witdth_300dp">300dp</dimen>
+    <dimen name="dimen_padding_end_8dp">8dp</dimen>
+    <dimen name="dimen_height_17dp">17dp</dimen>
+    <dimen name="dimen_margin_Top_30dp">30dp</dimen>
+    <dimen name="dimen_height_15dp">15dp</dimen>
+    <dimen name="dimen_width_86dp">86dp</dimen>
+    <dimen name="dimen_height_86dp">86dp</dimen>
+    <dimen name="icon_size">40dp</dimen>
+    <dimen name="dimen_width_30dp">30dp</dimen>
+    <dimen name="dimen_height_10dp">10dp</dimen>
+    <dimen name="dimen_height_8dp">8dp</dimen>
+    <dimen name="dimen_width_326dp">326dp</dimen>
+    <dimen name="dimen_padding_6dp">6dp</dimen>
+    <dimen name="dimen_height_250dp">250dp</dimen>
+    <dimen name="dimen_height_220dp">220dp</dimen>
+    <dimen name="dimen_margin_top_60dp">60dp</dimen>
+    <dimen name="dimen_margin_top_100dp">100dp</dimen>
+</resources>

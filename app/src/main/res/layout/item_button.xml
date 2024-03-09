@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/dimen_height_70dp">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/btnTitle"
+        android:layout_width="360dp"
+        android:layout_height="@dimen/dimen_height_60dp"
+        android:text="@string/pencil"
+        android:gravity="center"
+        android:textSize="@dimen/dimen_text_size_20sp"
+        android:fontFamily="@font/poppins_semibold"
+        android:textColor="@color/white"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:background="@drawable/bg_border_button"/>
+    
+
+</RelativeLayout>
