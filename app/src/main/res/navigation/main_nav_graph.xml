@@ -15,7 +15,23 @@
     </fragment>
     <fragment
         android:id="@+id/game_Play_Screen"
-        android:name="com.example.quizz_game.Container_Screen.Sub_Screen.ui.Game_Play_Screen"
+        android:name="com.example.quizz_game.Container_Screen.Sub_Screen.ui.GamePlayFragment"
         android:label="fragment_game__play__screen"
-        tools:layout="@layout/fragment_game__play__screen" />
+        tools:layout="@layout/fragment_game__play__screen" >
+        <action
+            android:id="@+id/action_game_Play_Screen_to_roadmapFragment"
+            app:destination="@id/roadmapFragment" />
+        <action
+            android:id="@+id/action_game_Play_Screen_to_questionFragment"
+            app:destination="@id/questionFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/roadmapFragment"
+        android:name="com.example.quizz_game.Container_Screen.Sub_Screen.ui.RoadmapFragment"
+        android:label="fragment_roadmap"
+        tools:layout="@layout/fragment_roadmap" />
+    <fragment
+        android:id="@+id/questionFragment"
+        android:name="com.example.quizz_game.Container_Screen.Sub_Screen.ui.QuestionFragment"
+        android:label="QuestionFragment" />
 </navigation>

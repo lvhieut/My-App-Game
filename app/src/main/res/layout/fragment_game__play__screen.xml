@@ -1,137 +1,214 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@color/violet"
-    tools:context=".Container_Screen.Sub_Screen.ui.Game_Play_Screen">
-<!--abc-->
-    <androidx.appcompat.widget.LinearLayoutCompat
-        android:id="@+id/firstLinearLayout"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="15dp"
-        android:orientation="horizontal"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
-
-        <RelativeLayout
-            android:id="@+id/subLayout"
-            android:layout_width="70dp"
-            android:layout_height="70dp"
-            android:layout_marginStart="20dp"
-            android:layout_marginTop="10dp"
-            android:background="@drawable/bg_border_oval">
-
-            <de.hdodenhof.circleimageview.CircleImageView
-                android:layout_width="60dp"
-                android:layout_height="60dp"
-                android:layout_centerInParent="true"
-                android:background="@drawable/bg_border_image"
-                android:src="@drawable/img_avt" />
-        </RelativeLayout>
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="2dp"
-            android:orientation="horizontal">
-
-            <androidx.appcompat.widget.LinearLayoutCompat
-                android:layout_width="150dp"
-                android:layout_height="17dp"
-                android:layout_marginStart="20dp"
-                android:layout_marginTop="30dp"
-                android:background="@drawable/bg_border">
-
-                <ProgressBar
-                    android:id="@+id/progress_horizontal"
-                    style="?android:attr/progressBarStyleHorizontal"
-                    android:layout_width="150dp"
-                    android:layout_height="15dp"
-                    android:layout_gravity="center_vertical"
-                    android:layout_marginStart="2dp"
-                    android:padding="2dp"
-                    android:progressDrawable="@drawable/custom_progress_horizontal"
-                    tools:max="100"
-                    android:progress="70"/>
-            </androidx.appcompat.widget.LinearLayoutCompat>
-
-            <RelativeLayout
-                android:id="@+id/progress_level"
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                android:layout_marginStart="-10dp"
-                android:layout_marginTop="17dp"
-                android:background="@drawable/bg_border">
-
-                <androidx.appcompat.widget.AppCompatImageView
-                    android:layout_width="34dp"
-                    android:layout_height="34dp"
-                    android:layout_centerInParent="true"
-                    android:background="@drawable/bg_border_orange"
-                    android:padding="10dp" />
-
-                <androidx.appcompat.widget.AppCompatTextView
-                    android:layout_width="20dp"
-                    android:layout_height="20dp"
-                    android:layout_marginStart="13dp"
-                    android:layout_marginTop="9dp"
-                    android:text="@string/number_test_12"
-                    android:fontFamily="@font/poppins_extrabold"
-                    android:textColor="@color/white"
-                    android:textSize="16sp" />
-            </RelativeLayout>
-        </LinearLayout>
+        android:layout_height="match_parent"
+        android:background="@color/violet"
+        tools:context=".Container_Screen.Sub_Screen.ui.GamePlayFragment">
 
         <androidx.appcompat.widget.LinearLayoutCompat
-            android:layout_width="wrap_content"
+            android:id="@+id/firstLinearLayout"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginStart="20dp"
-            android:layout_marginTop="10dp"
-            android:orientation="vertical">
+            android:layout_marginTop="@dimen/dimen_margin_top_15dp"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
 
-            <androidx.appcompat.widget.AppCompatTextView
+            <RelativeLayout
+                android:id="@+id/subLayout"
+                android:layout_width="@dimen/dimen_width_70dp"
+                android:layout_height="@dimen/dimen_height_70dp"
+                android:layout_marginStart="@dimen/dimen_margin_start_20dp"
+                android:layout_marginTop="@dimen/dimen_margin_top_10dp"
+                android:background="@drawable/bg_border_oval">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/avtProfile"
+                    android:layout_width="@dimen/dimen_width_60dp"
+                    android:layout_height="@dimen/dimen_height_60dp"
+                    android:layout_centerInParent="true"
+                    android:background="@drawable/bg_border_image"
+                    android:src="@drawable/img_avt" />
+            </RelativeLayout>
+
+            <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/points"
-                android:textColor="@color/white"
-                android:textSize="20sp" />
+                android:layout_marginTop="@dimen/dimen_margin_top_2dp"
+                android:orientation="horizontal">
 
-            <androidx.appcompat.widget.AppCompatTextView
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="@dimen/dimen_width_150dp"
+                    android:layout_height="@dimen/dimen_height_17dp"
+                    android:padding="2dp"
+                    android:layout_marginStart="@dimen/dimen_margin_start_20dp"
+                    android:layout_marginTop="@dimen/dimen_margin_Top_30dp"
+                    android:background="@drawable/bg_border">
+
+                    <ProgressBar
+                        android:id="@+id/progress_horizontal"
+                        style="?android:attr/progressBarStyleHorizontal"
+                        android:layout_width="@dimen/dimen_width_150dp"
+                        android:layout_height="@dimen/dimen_height_15dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginStart="2dp"
+                        android:padding="@dimen/dimen_padding_2dp"
+                        android:progress="70"
+                        android:progressDrawable="@drawable/custom_progress_horizontal"
+                        tools:max="100" />
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+                <RelativeLayout
+                    android:id="@+id/progress_level"
+                    android:layout_width="@dimen/dimen_width_40dp"
+                    android:layout_height="@dimen/dimen_height_40dp"
+                    android:layout_marginStart="-10dp"
+                    android:layout_marginTop="@dimen/dimen_margin_top_17dp"
+                    android:background="@drawable/bg_border">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="@dimen/dimen_width_34dp"
+                        android:layout_height="@dimen/dimen_height_34dp"
+                        android:layout_centerInParent="true"
+                        android:background="@drawable/bg_border_orange"
+                        android:padding="@dimen/dimen_padding_10dp" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="@dimen/dimen_width_20dp"
+                        android:layout_height="@dimen/dimen_height_20dp"
+                        android:layout_marginStart="@dimen/dimen_margin_start_13dp"
+                        android:layout_marginTop="@dimen/dimen_margin_top_9dp"
+                        android:fontFamily="@font/poppins_extrabold"
+                        android:text="@string/number_test_12"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/dimen_text_size_16sp" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <androidx.appcompat.widget.LinearLayoutCompat
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
-                android:fontFamily="@font/poppins_medium"
-                android:text="@string/number_test_231"
-                android:textColor="@color/white"
-                android:textSize="20sp" />
+                android:layout_marginStart="@dimen/dimen_margin_start_20dp"
+                android:layout_marginTop="@dimen/dimen_margin_top_10dp"
+                android:orientation="vertical">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/points"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/dimen_text_size_20sp" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:fontFamily="@font/poppins_medium"
+                    android:text="@string/number_test_231"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/dimen_text_size_20sp" />
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
 
         </androidx.appcompat.widget.LinearLayoutCompat>
 
+        <RelativeLayout
+            android:id="@+id/rlvLayout"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen_height_520dp"
+            android:layout_marginTop="@dimen/dimen_margin_top_16dp"
+            android:background="@drawable/bg_decoration"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/firstLinearLayout">
 
-    </androidx.appcompat.widget.LinearLayoutCompat>
-
-    <RelativeLayout
-        android:id="@+id/rlvLayout"
-        android:layout_width="match_parent"
-        android:layout_height="480dp"
-        android:layout_marginTop="16dp"
-        android:background="@drawable/bg_decoration"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/firstLinearLayout">
-
-        <androidx.appcompat.widget.AppCompatImageView
-            android:layout_width="350dp"
-            android:layout_height="380dp"
-            android:background="@drawable/ic_mutil_player"
-            android:translationX="26dp"
-            android:elevation="10dp"
-            android:translationY="60dp" />
-    </RelativeLayout>
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/multiplayer"
+                android:layout_width="@dimen/dimen_width_390dp"
+                android:layout_height="@dimen/dimen_height_450dp"
+                android:background="@drawable/ic_mutil_player"
+                android:translationY="@dimen/dimen_translation_y_40dp"
+                android:translationX="-13dp" />
+        </RelativeLayout>
 
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnLeft"
+            android:layout_width="@dimen/dimen_width_63dp"
+            android:layout_height="@dimen/dimen_height_60dp"
+            android:background="@drawable/bg_border_left"
+            android:drawableStart="@drawable/baseline_chevron_left_24"
+            android:paddingStart="8dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="RtlSymmetry" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnRight"
+            android:layout_width="@dimen/dimen_width_63dp"
+            android:layout_height="@dimen/dimen_height_60dp"
+            android:background="@drawable/bg_border_right"
+            android:drawableStart="@drawable/baseline_chevron_right_24"
+            android:paddingStart="@dimen/dimen_padding_start_8dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="RtlSymmetry" />
+
+        <RelativeLayout
+            android:id="@+id/btnCharacter"
+            android:layout_width="@dimen/dimen_width_90dp"
+            android:layout_height="@dimen/dimen_height_90dp"
+            android:layout_marginStart="102dp"
+            android:layout_marginTop="@dimen/dimen_margin_top_17dp"
+            android:background="@drawable/bg_border"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/rlvLayout">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="@dimen/dimen_width_86dp"
+                android:layout_height="@dimen/dimen_height_86dp"
+                android:layout_centerInParent="true"
+                android:background="@drawable/bg_border_cyan"
+                android:src="@drawable/ic_book_svg" />
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/btnProfile"
+            android:layout_width="@dimen/dimen_width_90dp"
+            android:layout_height="@dimen/dimen_height_90dp"
+            android:layout_marginStart="@dimen/dimen_margin_start_20dp"
+            android:layout_marginTop="@dimen/dimen_margin_top_17dp"
+            android:background="@drawable/bg_border"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/btnCharacter"
+
+            app:layout_constraintTop_toBottomOf="@+id/rlvLayout">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="@dimen/dimen_width_86dp"
+                android:layout_height="@dimen/dimen_height_86dp"
+                android:layout_centerInParent="true"
+                android:background="@drawable/bg_border_orange"
+                android:src="@drawable/icon_profile" />
+
+
+        </RelativeLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
