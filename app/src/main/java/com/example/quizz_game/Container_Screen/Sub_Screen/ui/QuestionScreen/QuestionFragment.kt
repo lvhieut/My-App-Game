@@ -1,12 +1,15 @@
-package com.example.quizz_game.Container_Screen.Sub_Screen.ui
+package com.example.quizz_game.Container_Screen.Sub_Screen.ui.QuestionScreen
 
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.appcompat.widget.AppCompatButton
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
+import androidx.lifecycle.Observer
+import androidx.lifecycle.ViewModelProvider
 import com.example.quizz_game.R
 import com.example.quizz_game.databinding.FragmentQuestionBinding
 
@@ -14,12 +17,12 @@ import com.example.quizz_game.databinding.FragmentQuestionBinding
 class QuestionFragment : Fragment() {
 
     private lateinit var questionFmBinding: FragmentQuestionBinding
+    private lateinit var viewModel: ViewModelQuestionScr
 
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
     }
 
     override fun onCreateView(
@@ -33,6 +36,22 @@ class QuestionFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+        viewModel = ViewModelProvider(this).get(ViewModelQuestionScr::class.java)
+
+
+        viewModel.data.observe(requireActivity(), Observer { data ->
+            with(questionFmBinding) {
+                answer1.text = data.answer1
+                answer2.text = data.answer2
+                answer3.text = data.answer3
+                answer4.text = data.answer4
+                tvQuestion.text = data.question
+            }
+        })
+
+        viewModel.fetchData()
+        Log.d("---","${viewModel.fetchData()}")
 
         with(questionFmBinding){
             answer1.setBackgroundColor(resources.getColor(R.color.grey))

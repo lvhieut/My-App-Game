@@ -32,6 +32,6 @@
         tools:layout="@layout/fragment_roadmap" />
     <fragment
         android:id="@+id/questionFragment"
-        android:name="com.example.quizz_game.Container_Screen.Sub_Screen.ui.QuestionFragment"
+        android:name="com.example.quizz_game.Container_Screen.Sub_Screen.ui.QuestionScreen.QuestionFragment"
         android:label="QuestionFragment" />
 </navigation>

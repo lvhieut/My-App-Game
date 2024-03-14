@@ -12,7 +12,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@color/violet"
-        tools:context=".Container_Screen.Sub_Screen.ui.QuestionFragment">
+        tools:context=".Container_Screen.Sub_Screen.ui.QuestionScreen.QuestionFragment">
 
         <androidx.appcompat.widget.LinearLayoutCompat
             android:id="@+id/firstChildLayout"
@@ -97,6 +97,7 @@
                     android:layout_height="100dp" />
 
                 <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvQuestion"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_horizontal"
