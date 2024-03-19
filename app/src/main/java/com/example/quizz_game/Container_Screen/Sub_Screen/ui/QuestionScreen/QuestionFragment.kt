@@ -1,15 +1,17 @@
 package com.example.quizz_game.Container_Screen.Sub_Screen.ui.QuestionScreen
 
+import android.animation.ValueAnimator
 import android.os.Bundle
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.appcompat.widget.AppCompatButton
+import androidx.appcompat.widget.PopupMenu
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.fragment.NavHostFragment
 import com.example.quizz_game.R
 import com.example.quizz_game.databinding.FragmentQuestionBinding
 
@@ -18,8 +20,6 @@ class QuestionFragment : Fragment() {
 
     private lateinit var questionFmBinding: FragmentQuestionBinding
     private lateinit var viewModel: ViewModelQuestionScr
-
-
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -38,8 +38,7 @@ class QuestionFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         viewModel = ViewModelProvider(this).get(ViewModelQuestionScr::class.java)
-
-
+        viewModel.fetchData()
         viewModel.data.observe(requireActivity(), Observer { data ->
             with(questionFmBinding) {
                 answer1.text = data.answer1
@@ -50,39 +49,55 @@ class QuestionFragment : Fragment() {
             }
         })
 
-        viewModel.fetchData()
         Log.d("---","${viewModel.fetchData()}")
 
-        with(questionFmBinding){
-            answer1.setBackgroundColor(resources.getColor(R.color.grey))
-            answer2.setBackgroundColor(resources.getColor(R.color.grey))
-            answer3.setBackgroundColor(resources.getColor(R.color.grey))
-            answer4.setBackgroundColor(resources.getColor(R.color.grey))
-        }
-
         questionFmBinding.answer1.setOnClickListener(){
-            changeBackgroundColor(questionFmBinding.answer1)
+            countdownTimer()
         }
         questionFmBinding.answer2.setOnClickListener(){
-            changeBackgroundColor(questionFmBinding.answer2)
+            countdownTimer()
         }
         questionFmBinding.answer3.setOnClickListener(){
-            changeBackgroundColor(questionFmBinding.answer3)
+            countdownTimer()
         }
         questionFmBinding.answer4.setOnClickListener(){
-            changeBackgroundColor(questionFmBinding.answer4)
+            countdownTimer()
+        }
+        questionFmBinding.menu.setOnClickListener(){v ->
+            showPopupMenu(v)
         }
     }
-    private fun changeBackgroundColor(clickedButton: AppCompatButton) {
-        val buttonList: List<AppCompatButton> = listOf(
-            questionFmBinding.answer1,
-            questionFmBinding.answer2,
-            questionFmBinding.answer3,
-            questionFmBinding.answer4
-        )
-        buttonList.forEach { button ->
-            button.setBackgroundColor(resources.getColor(R.color.grey))
+
+    private fun countdownTimer() {
+        val animator = ValueAnimator.ofFloat(100f, 0f)
+        animator.duration = 7000 // Đặt thời gian kéo từ 100 về 0 là 1 giây (1000 milliseconds)
+
+        animator.addUpdateListener { valueAnimator ->
+            val progress = valueAnimator.animatedValue as Float
+            questionFmBinding.progressHorizontal.progress = progress.toInt()
         }
-        clickedButton.setBackgroundColor(resources.getColor(R.color.gold))
+        animator.start() // Bắt đầu animation
     }
+
+    private fun showPopupMenu(v: View) {
+        val popupMenu = PopupMenu(requireContext(), v)
+        popupMenu.inflate(R.menu.popup_menu)
+
+        popupMenu.setOnMenuItemClickListener { item ->
+            when (item.itemId) {
+                R.id.action_finish -> {
+                    NavHostFragment.findNavController(this@QuestionFragment).navigate(R.id.action_questionFragment_to_resultFragment)
+                    true
+                }
+                R.id.action_delete -> {
+                    // Xử lý khi mục "Delete" được chọn
+                    true
+                }
+                else -> false
+            }
+        }
+
+        popupMenu.show()
+    }
+
 }

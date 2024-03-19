@@ -18,7 +18,7 @@ class ViewModelQuestionScr : ViewModel() {
 
     fun fetchData() {
         val apiService = ApiClient.create()
-        val call = apiService.getQuestion(1)
+        val call = apiService.getQuestion(3)
 
         call.enqueue(object : Callback<QuestionListResponseItemX> {
             override fun onResponse(call: Call<QuestionListResponseItemX>, response: Response<QuestionListResponseItemX>) {

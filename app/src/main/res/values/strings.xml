@@ -11,4 +11,11 @@
     <string name="question">Question</string>
     <string name="question_string">What is this thing?</string>
     <string name="pencil">Pencil</string>
+    <string name="nice_work">Nice Work</string>
+    <string name="you_earned">You Earned</string>
+    <string name="value_80_pts"> 80 pts</string>
+    <string name="next_stage">Next Stage</string>
+    <string name="play_again">Play Again</string>
+    <string name="back_to_home">Back to Home</string>
+    <string name="finish">Finish</string>
 </resources>

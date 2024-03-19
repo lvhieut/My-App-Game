@@ -35,7 +35,7 @@ class GamePlayFragment : Fragment() {
             NavHostFragment.findNavController(this@GamePlayFragment).navigate(R.id.action_game_Play_Screen_to_roadmapFragment)
         }
 
-        gamePlayScrBinding.multiplayer.setOnClickListener(){
+        gamePlayScrBinding.multiplayer.setOnClickListener{
             NavHostFragment.findNavController(this@GamePlayFragment).navigate(R.id.action_game_Play_Screen_to_questionFragment)
         }
 

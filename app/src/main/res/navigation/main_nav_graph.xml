@@ -8,7 +8,8 @@
     <fragment
         android:id="@+id/intro_Screen"
         android:name="com.example.quizz_game.Container_Screen.Sub_Screen.ui.Intro_Screen"
-        android:label="Intro_Screen" >
+        android:label="Intro_Screen"
+        tools:layout="@layout/fragment_intro__screen">
         <action
             android:id="@+id/action_intro_Screen_to_game_Play_Screen"
             app:destination="@id/game_Play_Screen" />
@@ -33,5 +34,20 @@
     <fragment
         android:id="@+id/questionFragment"
         android:name="com.example.quizz_game.Container_Screen.Sub_Screen.ui.QuestionScreen.QuestionFragment"
-        android:label="QuestionFragment" />
+        android:label="QuestionFragment"
+        tools:layout="@layout/fragment_question">
+        <action
+            android:id="@+id/action_questionFragment_to_resultFragment"
+            app:destination="@id/resultFragment"
+            app:enterAnim="@anim/slide_in_left" />
+    </fragment>
+    <fragment
+        android:id="@+id/resultFragment"
+        android:name="com.example.quizz_game.Container_Screen.Sub_Screen.ui.ResultFragment"
+        android:label="ResultFragment"
+        tools:layout="@layout/fragment_result">
+        <action
+            android:id="@+id/action_resultFragment_to_game_Play_Screen"
+            app:destination="@id/game_Play_Screen" />
+    </fragment>
 </navigation>

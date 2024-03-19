@@ -77,4 +77,13 @@
     <dimen name="dimen_height_220dp">220dp</dimen>
     <dimen name="dimen_margin_top_60dp">60dp</dimen>
     <dimen name="dimen_margin_top_100dp">100dp</dimen>
+    <dimen name="dimen_margin_top_220dp">220dp</dimen>
+    <dimen name="dimen_padding_top_50dp">50dp</dimen>
+    <dimen name="dimen_margin_start_26dp">26dp</dimen>
+    <dimen name="dimen_margin_top_70dp">70dp</dimen>
+    <dimen name="dimen_height_54dp">54dp</dimen>
+    <dimen name="dimen_width_124dp">124dp</dimen>
+    <dimen name="dimen_textsize_24sp">24sp</dimen>
+    <dimen name="diment_textsize_18sp">18sp</dimen>
+    <dimen name="dimen_height_74dp">74dp</dimen>
 </resources>

@@ -14,6 +14,8 @@
         android:background="@color/violet"
         tools:context=".Container_Screen.Sub_Screen.ui.QuestionScreen.QuestionFragment">
 
+
+
         <androidx.appcompat.widget.LinearLayoutCompat
             android:id="@+id/firstChildLayout"
             android:layout_width="match_parent"
@@ -26,6 +28,7 @@
             app:layout_constraintTop_toTopOf="parent">
 
             <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/btnBack"
                 android:layout_width="@dimen/dimen_width_60dp"
                 android:layout_height="@dimen/dimen_height_60dp"
                 android:layout_weight="2"
@@ -44,6 +47,7 @@
                 android:textSize="@dimen/dimen_text_size_20sp" />
 
             <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/menu"
                 android:layout_width="@dimen/dimen_width_60dp"
                 android:layout_height="@dimen/dimen_height_60dp"
                 android:layout_weight="2"
@@ -65,7 +69,7 @@
             android:layout_width="@dimen/dimen_width_326dp"
             android:layout_height="@dimen/dimen_height_8dp"
             android:max="100"
-            android:progress="80"
+            android:progress="100"
             android:progressDrawable="@drawable/custom_progress_horizontal_orange"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -87,6 +91,7 @@
 
 
             <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/questionLayoutLinear"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/dimen_height_220dp"
                 android:layout_alignParentBottom="true"
@@ -113,7 +118,7 @@
                 android:layout_width="120dp"
                 android:layout_height="120dp"
                 android:layout_centerHorizontal="true"
-                android:background="@drawable/bg_border_orange"
+                android:background="@drawable/bg_border_skin"
                 android:src="@drawable/ic_pencil" />
         </RelativeLayout>
 
@@ -124,16 +129,17 @@
             android:gravity="center"
             android:orientation="vertical"
             android:weightSum="4"
+            app:layout_constraintTop_toBottomOf="@+id/secondChildLayout"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent">
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/answer1"
-                android:layout_width="@dimen/dimen_width_270dp"
+                android:layout_width="@dimen/dimen_witdth_300dp"
                 android:layout_height="0dp"
                 android:layout_weight="1"
-                android:background="@drawable/bg_border_button"
+                android:background="@drawable/button_state"
                 android:text="@string/pencil" />
             <Space
                 android:layout_width="match_parent"
@@ -141,10 +147,10 @@
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/answer2"
-                android:layout_width="@dimen/dimen_width_270dp"
+                android:layout_width="@dimen/dimen_witdth_300dp"
                 android:layout_height="0dp"
                 android:layout_weight="1"
-                android:background="@drawable/bg_border_button"
+                android:background="@drawable/button_state"
                 android:text="@string/pencil" />
             <Space
                 android:layout_width="match_parent"
@@ -152,10 +158,10 @@
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/answer3"
-                android:layout_width="@dimen/dimen_width_270dp"
+                android:layout_width="@dimen/dimen_witdth_300dp"
                 android:layout_height="0dp"
                 android:layout_weight="1"
-                android:background="@drawable/bg_border_button"
+                android:background="@drawable/button_state"
                 android:text="@string/pencil" />
             <Space
                 android:layout_width="match_parent"
@@ -163,10 +169,10 @@
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/answer4"
-                android:layout_width="@dimen/dimen_width_270dp"
+                android:layout_width="@dimen/dimen_witdth_300dp"
                 android:layout_height="0dp"
                 android:layout_weight="1"
-                android:background="@drawable/bg_border_button"
+                android:background="@drawable/button_state"
                 android:text="@string/pencil" />
             <Space
                 android:layout_width="match_parent"
