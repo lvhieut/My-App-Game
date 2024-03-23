@@ -14,8 +14,6 @@
         android:background="@color/violet"
         tools:context=".Container_Screen.Sub_Screen.ui.QuestionScreen.QuestionFragment">
 
-
-
         <androidx.appcompat.widget.LinearLayoutCompat
             android:id="@+id/firstChildLayout"
             android:layout_width="match_parent"
