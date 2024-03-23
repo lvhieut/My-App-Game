@@ -31,8 +31,8 @@
             android:layout_below="@+id/background_notification"
             android:layout_centerInParent="true"
             android:layout_marginTop="@dimen/dimen_margin_top_80dp"
-            android:elevation="@dimen/dimen_elevation_2dp"
             android:background="@drawable/bg_border"
+            android:elevation="@dimen/dimen_elevation_2dp"
             android:orientation="vertical">
 
             <TextView

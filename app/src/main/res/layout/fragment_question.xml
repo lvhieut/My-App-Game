@@ -96,7 +96,7 @@
                 android:layout_height="@dimen/dimen_height_220dp"
                 android:layout_alignParentBottom="true"
                 android:background="@drawable/bg_border"
-                android:orientation="vertical">  <!--căn cạnh dưới view con với cạnh dưới view cha-->
+                android:orientation="vertical">  <!--alignParentBottom căn cạnh dưới view con với cạnh dưới view cha-->
                 <Space
                     android:layout_width="match_parent"
                     android:layout_height="100dp" />

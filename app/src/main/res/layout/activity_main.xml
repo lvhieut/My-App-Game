@@ -12,17 +12,6 @@
         android:layout_height="match_parent"
         tools:context=".Container_Screen.MainActivity">
 
-        <!--<androidx.fragment.app.FragmentContainerView
-            android:id="@+id/fragemntContainer"
-            android:name="com.example.quizz_game.Container_Screen.Sub_Screen.ui.Intro_Screen"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            tools:name="com.example.quizz_game.Container_Screen.Sub_Screen.ui.Intro_Screen"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />-->
-
         <androidx.fragment.app.FragmentContainerView
             android:id="@+id/fragmentContainerView1"
             android:name="androidx.navigation.fragment.NavHostFragment"
